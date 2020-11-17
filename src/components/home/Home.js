@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import HomeProdects from "../home_prodects/HomePprodects";
+import Slider from '../topSlider/Slider'
 import { Link, Redirect } from "react-router-dom";
 import "./home.css";
 
@@ -58,7 +58,7 @@ function Home(props) {
 
   return (
     <>
-      {/* <HomeProdects /> */}
+      <Slider />
       {
         isLoggin ? (
           <>
