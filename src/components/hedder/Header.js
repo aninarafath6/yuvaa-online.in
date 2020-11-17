@@ -63,10 +63,7 @@ function Header(props) {
     menuRef.current.classList.toggle("visible");
 
   }
-  const openNav=()=>{
-    toggleRef.current.classList.toggle("open");
-    menuRef.current.classList.toggle("visible");
-  }
+  
   return (
     <div >
       <nav className="navbar">
