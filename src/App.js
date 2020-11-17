@@ -7,6 +7,7 @@ import SearchItem from './components/search prodects/Prodects'
 import Footer from './components/footer/Footer'
 import Signup from './components/signup/Signup'
 import ProdectDeitials from './components/prodectDeitials/ProdectDeitials'
+import Cart from './components/cart/cart'
 
 function App() {
   const [reMountHedderr, setHeMountHedderr] = useState(0)
@@ -30,6 +31,10 @@ function App() {
   }
   const getPdata = (itm) => {
     setPdata(itm);
+  }
+  const removeitemFromCart = (item) => {
+    setHeMountHedderr(item + 1)
+
   }
   return (
     <div className="App">
@@ -60,6 +65,9 @@ function App() {
           </Route>
           <Route path="/prodectDeitials:id">
             <ProdectDeitials data={reMountt} />
+          </Route>
+          <Route path="/cart">
+            <Cart data={removeitemFromCart} />
           </Route>
 
 
