@@ -8,7 +8,7 @@ function Header(props) {
   const [sItem, setSitem] = useState("");
   const [user, setUser] = useState("");
   const [cartCount, setCartCount] = useState(0);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(10);
   const history = useHistory();
   const toggleRef = useRef();
   const menuRef = useRef();
@@ -32,7 +32,7 @@ function Header(props) {
   }, [count, props.reMountHedder, props.reMountHedderr])
 
   const onLogut = () => {
-    setCount(count + 1)
+    setCount(count + 1*2)
     localStorage.clear('token');
     props.onLogut(count)
 

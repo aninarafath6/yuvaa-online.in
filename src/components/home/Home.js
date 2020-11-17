@@ -48,7 +48,7 @@ function Home(props) {
     axios.get("addTocart/" + id, config).then((res) => {
       console.log(res);
       setIsLoggin(res.data.loggin)
-      setCount(count + 1)
+      setCount(count + 1*2)
       props.data(count)
 
 

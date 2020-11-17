@@ -5,10 +5,11 @@ import Home from './components/home/Home'
 import Login from './components/login/Login'
 import SearchItem from './components/search prodects/Prodects'
 import Footer from './components/footer/Footer'
+import Signup from './components/signup/Signup'
 
 function App() {
   const [reMountHedderr, setHeMountHedderr] = useState(0)
-  const [onLogout, setlogoutCount] = useState(0)
+  const [obnLogout, setlogoutCount] = useState(0)
   const [reMountHedder, setHeMountHedder] = useState(2)
   const [pdata, setPdata] = useState(2)
 
@@ -38,7 +39,7 @@ function App() {
 
       <Router>
 
-        <Hedder data={getPdata}  onLogut={onLogut} reMountHedder={reMountHedder} reMountHedderr={reMountHedderr} />
+        <Hedder data={getPdata} onLogut={onLogut} reMountHedder={reMountHedder} reMountHedderr={reMountHedderr} />
 
         <Switch>
           <Route path="/" exact>
@@ -50,9 +51,13 @@ function App() {
           <Route path="/login" >
             <Login data={reMountt} />
           </Route>
+          <Route path="/signup"  >
+            <Signup data={reMountt} />
+          </Route>
           <Route path="/Sprodects" >
             <SearchItem data={pdata} />
           </Route>
+
 
         </Switch>
 
