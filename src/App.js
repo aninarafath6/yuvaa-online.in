@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Hedder from './components/hedder/Header';
+import Home from './components/home/Home'
 
 function App() {
   return (
@@ -14,6 +15,12 @@ function App() {
         <Hedder />
 
         <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/home" exact>
+            <Home/>
+          </Route>
           
         </Switch>
 
