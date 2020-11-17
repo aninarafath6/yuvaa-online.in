@@ -6,6 +6,7 @@ import Login from './components/login/Login'
 import SearchItem from './components/search prodects/Prodects'
 import Footer from './components/footer/Footer'
 import Signup from './components/signup/Signup'
+import ProdectDeitials from './components/prodectDeitials/ProdectDeitials'
 
 function App() {
   const [reMountHedderr, setHeMountHedderr] = useState(0)
@@ -57,6 +58,10 @@ function App() {
           <Route path="/Sprodects" >
             <SearchItem data={pdata} />
           </Route>
+          <Route path="/prodectDeitials:id">
+            <ProdectDeitials data={reMountt} />
+          </Route>
+
 
 
         </Switch>

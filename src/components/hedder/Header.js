@@ -32,7 +32,8 @@ function Header(props) {
   }, [count, props.reMountHedder, props.reMountHedderr])
 
   const onLogut = () => {
-    setCount(count + 1*2)
+    setCount(count + 1)
+    setCount(count + 2)
     localStorage.clear('token');
     props.onLogut(count)
 
