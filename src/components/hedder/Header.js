@@ -9,6 +9,7 @@ function Header(props) {
   const [user, setUser] = useState("");
   const [cartCount, setCartCount] = useState(0);
   const [count, setCount] = useState(10);
+  const [togglePressed, setTogglePressed] = useState(false);
   const history = useHistory();
   const toggleRef = useRef();
   const menuRef = useRef();
@@ -40,7 +41,7 @@ function Header(props) {
   }
 
   const serched = () => {
-    if (sItem !=="") {
+    if (sItem !== "") {
       history.push('/Sprodects')
       props.data(sItem);
 
@@ -62,20 +63,27 @@ function Header(props) {
     console.log(toggleRef.current);
     toggleRef.current.classList.toggle("open");
     menuRef.current.classList.toggle("visible");
+    setTogglePressed(true)
 
   }
-  
+  const closeNav = () => {
+    if (togglePressed) {
+      toggleRef.current.classList.remove("open");
+      menuRef.current.classList.remove("visible");
+    }
+  }
+
   return (
     <div >
       <nav className="navbar">
         <div className="brand-and-toggler">
-          <label className="toggler-btn" onClick={toggle}>
+          <label className="toggler-btn" onClick={toggle} >
             <i className="fas fa-bars" />
           </label>
 
           <label className="nav-brand"><Link to="/" className="brand-link"> YUVAA-ONLINE.IN</Link> </label>
 
-     
+
           <label className="crt-icon">
             <span className="cart-count">{cartCount}</span>
             <Link className="brand-link" to="/cart">  <i class="fas fa-shopping-cart"></i></Link>         </label>
@@ -91,7 +99,7 @@ function Header(props) {
 
 
       </nav>
-      <div ref={toggleRef} className="nav2">
+      <div ref={toggleRef} onMouseLeave={closeNav} className="nav2">
         <div className="" >
           <ul className="nav-menu">
             <li className="nav-link"><Link className="Link" to="/">Phones</Link></li>
