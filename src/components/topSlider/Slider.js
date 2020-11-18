@@ -23,8 +23,8 @@ function ControlledCarousel() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>YUVAA ONLINE.</h3>
-            <p>your selactin with yuvaa online</p>
+            {/* <h3>YUVAA ONLINE.</h3>
+            <p>your selactin with yuvaa online</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -35,8 +35,8 @@ function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,10 +47,10 @@ function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            {/* <h3>Third slide label</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
